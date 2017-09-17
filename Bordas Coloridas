@@ -1,0 +1,67 @@
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+import javax.swing.BorderFactory;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.border.Border;
+import javax.swing.border.CompoundBorder;
+import javax.swing.border.LineBorder;
+
+/**
+ *
+ * @author onezer0
+ */
+public class BordasExp2 extends JFrame{
+    private Border bordaLinha = null;
+    private Border bordaChanfro = null;
+    private Border bordaLinhaChanfro = null;
+    private Border bordaVermelha = null;
+    private Border bordaLaranja = null;
+    private Border bordaAmarela = null;
+    private Border bordaVerde = null;
+    private Border bordaAzul = null;
+    private Border bordaMagenta = null;
+    private Border bordaDuasCores = null;
+    private Border bordaTresCores = null;
+    private Border bordaQuatroCores = null;
+    private Border bordaCincoCores = null;
+    private Border bordaSeisCores = null;
+    private JButton botaoArcoIris = null;
+    private JButton botaoLinhaChanfro = null;
+    
+    public BordasExp2(){
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setPreferredSize(new Dimension(300, 100));
+        setLayout(new GridLayout(1, 21));
+        
+        bordaLinha = LineBorder.createBlackLineBorder();        
+        bordaChanfro = BorderFactory.createRaisedBevelBorder();        
+        bordaLinhaChanfro = new CompoundBorder(bordaChanfro, bordaLinha);
+        
+        botaoLinhaChanfro = new JButton("Linha Chanfro");
+        
+        botaoLinhaChanfro.setBorder(bordaLinhaChanfro);
+        
+        bordaVermelha = BorderFactory.createLineBorder(Color.red);
+        bordaLaranja = BorderFactory.createLineBorder(Color.orange);
+        bordaAmarela = BorderFactory.createLineBorder(Color.yellow);
+        bordaVerde = BorderFactory.createLineBorder(Color.green);
+        bordaAzul = BorderFactory.createLineBorder(Color.blue);
+        bordaMagenta = BorderFactory.createLineBorder(Color.magenta);
+        
+        bordaDuasCores = new CompoundBorder(bordaMagenta, bordaAzul);
+        bordaTresCores = new CompoundBorder(bordaDuasCores, bordaVerde);
+        bordaQuatroCores = new CompoundBorder(bordaTresCores, bordaAmarela);
+        bordaCincoCores = new CompoundBorder(bordaQuatroCores, bordaLaranja);
+        bordaSeisCores = new CompoundBorder(bordaCincoCores, bordaVermelha);
+        
+        botaoArcoIris = new JButton("Arco-Iris");
+        botaoArcoIris.setBorder(bordaSeisCores);        
+        
+        setLocationRelativeTo(null);
+        add(botaoArcoIris);
+        add(botaoLinhaChanfro);
+        pack();
+    }
+}
