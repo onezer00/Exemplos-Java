@@ -1,8 +1,7 @@
-[logo]: https://github.com/onezer00/Exemplos-Java/blob/master/K85ZWV2F_400x400.png
 # Exemplos-Java
 Mostrando alguns exemplos em Java
 
-
+[logo]: https://github.com/onezer00/Exemplos-Java/blob/master/K85ZWV2F_400x400.png "Java Sun"
 ## Aprendendo Java com exemplos práticos
 
 **Java - Como devo começar?**
