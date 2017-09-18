@@ -32,6 +32,6 @@ Aqui está nosso código para o exemplo acima: [Exemplo JRadioButton - Git](http
 Já que estamos falando de formatação de texto, iremos nos aprofundar um pouco mais, vendo um exemplo de como ter acesso a lista de fontes. Para isso utilizaremos o método ``GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();``, e criaremos um laço para percorrer a todas as fontes disponíveis.
 
 _Deverá ficar como no exemplo:_
-<p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/java.png"> <img /> </p>
+<p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/fontlist.png"> <img /> </p>
 
 Veja o código do nosso exemplo: [Exemplo Font - Git](https://github.com/onezer00/Exemplos-Java/blob/master/Font)
