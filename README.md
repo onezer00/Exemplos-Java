@@ -135,6 +135,8 @@ Embora tenhamos adicionado o Panel ao nosso Frame, ainda não conseguiremos visu
 
 Para dar um exemplo bacana, criaremos o seguinte código com base no que aprendemos até agora, para termos uma idéia do que vem pela frente:
 
+<p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/primeiro%20frame%20java.png"> <img /> </p>
+
 **_FramesPanels.java_**
 ```java
 //Esta é a classe java que criará nosso Frame
