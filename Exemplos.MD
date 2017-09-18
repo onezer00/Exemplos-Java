@@ -33,3 +33,5 @@ Já que estamos falando de formatação de texto, iremos nos aprofundar um pouco
 
 _Deverá ficar como no exemplo:_
 <p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/java.png"> <img /> </p>
+
+Veja o código do nosso exemplo: [Exemplo Font - Git](https://github.com/onezer00/Exemplos-Java/blob/master/Font)
