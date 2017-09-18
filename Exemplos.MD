@@ -15,3 +15,7 @@ Aqui trabalharemos com classes abstratas, que nada mais é do que uma estrutura 
 
 **Agora que sabemos um pouco sobre o assunto, vamos ver alguns exemplos práticos:**
 
+Em nosso primeiro exemplo, criaremos uma janela com 3 ``JRadioButton`` que irá alterar nosso texto conforme nossa seleção ``BOLD, ITALIC e BOLD + ITALIC``.
+
+_Ficará como o exemplo abaixo:_
+<p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/java.png"> <img /> </p>
