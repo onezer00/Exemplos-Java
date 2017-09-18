@@ -17,6 +17,8 @@ Aqui trabalharemos com classes abstratas, que nada mais é do que uma estrutura 
 
 ---
 
+**Formatação de texto - Bold, Italic e Italic+Bold**
+---
 Em nosso primeiro exemplo, criaremos uma janela com 3 ``JRadioButton`` que irá alterar nosso texto conforme nossa seleção ``BOLD, ITALIC e BOLD + ITALIC``.
 
 _Ficará como o exemplo abaixo:_
@@ -25,3 +27,9 @@ _Ficará como o exemplo abaixo:_
 Aqui está nosso código para o exemplo acima: [Exemplo JRadioButton - Git](https://github.com/onezer00/Exemplos-Java/blob/master/JRadioButton)
 
 ---
+**Formataço de texto - Fontes**
+---
+Já que estamos falando de formatação de texto, iremos nos aprofundar um pouco mais, vendo um exemplo de como ter acesso a lista de fontes. Para isso utilizaremos o método ``GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();``, e criaremos um laço para percorrer a todas as fontes disponíveis.
+
+_Deverá ficar como no exemplo:_
+<p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/java.png"> <img /> </p>
