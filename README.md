@@ -186,4 +186,8 @@ public class Painel extends JPanel{
 ```
 Para Mais detalhes sobre os métodos e outras funcionalidades do JPanel, você pode acessar a [Documentação do JPanel](http://docs.oracle.com/javase/1.4.2/docs/api/javax/swing/JPanel.html)
 
+A partir daqui, veremos exemplos práticos usados no dia a dia. E para não se tornar um arquivo muito grande criaremos um arquivo para listar [todos os nossos exemplos](https://github.com/onezer00/Exemplos-Java/blob/master/Exemplos.MD)
+
+[Clique aqui para ir para a página de exemplos](https://github.com/onezer00/Exemplos-Java/blob/master/Exemplos.MD)
+
 ---
