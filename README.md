@@ -102,6 +102,6 @@ public class framesPanels {
 }
 ```
 
-Você pode consultar mais sobre as funcionalidades da classe JFrame em na [Documentação sobre JFrame](http://docs.oracle.com/javase/6/docs/api/javax/swing/JFrame.html)
+Você pode consultar mais sobre as funcionalidades da classe JFrame na [Documentação sobre JFrame](http://docs.oracle.com/javase/6/docs/api/javax/swing/JFrame.html)
 
 ---
