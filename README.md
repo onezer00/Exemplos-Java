@@ -89,7 +89,7 @@ Vamos usar o método ``SetVisible``, que recebe um tipo _boolean_. Como o que qu
 
 Caso queira definir um tamanho pré-definido, use o método ``setSize()``, que recebe dois parâmetros com os pixels da janela (horizontal e vertical):
 
-_Em nosso caso, usaremos o método mencionado com um incremento como parâmetro, veja o exemplo abaixo_:
+_Em nosso caso, usaremos o método mencionado ``setSize`` para definir o tamanho de nossa janela, veja o exemplo abaixo_:
 
 ```java
 import javax.swing.JFrame;
@@ -97,12 +97,91 @@ import javax.swing.JFrame;
 public class framesPanels {
   public static void main(String[] args) {
     JFrame janela = new JFrame("Hello World");
-    janela.setPreferredSize(new Dimensions(300, 200));
+    janela.setSize(300, 200);
     janela.setVisible(true);
   }
 }
 ```
 
 Você pode consultar mais sobre as funcionalidades da classe JFrame na [Documentação sobre JFrame](http://docs.oracle.com/javase/6/docs/api/javax/swing/JFrame.html)
+
+**_JPanel: Inserindo elementos em um JFrame_**
+
+Como vimos, nosso frame está vazio. Apenas definimos o tamanho da 'moldura' e o título.
+Vamos adicionar alguns elementos ao nosso frame, e faremos isso inserindo um JPanel, onde nele podemos colocar uma infinidade de elementos, chamados JComponents:
+
+
+
+Para usar o JPanel, importamos essa classe da package swing, usando ``import.javax.swing.JPanel;``.
+
+Vamos criar uma classe que será nosso painel, vamos chamar de "Painel".
+Para isso, basta fazer com que ela **_Extends_** a _JPanel_, como aprendemos em [Herança], para herdarmos todas as propriedades do JPanel.
+
+```java
+import javax.swing.JPanel;
+
+public class Painel extends JPanel {
+
+}
+```
+Na nossa classe principal, vamos criar um objeto do tipo "Painel" e chamar de "meuPainel".
+Adicionaremos nosso JPanel em nosso JFrame, usando o método **_add_** que recebe como argumento um JPanel:
+
+```java
+Painel meuPainel = new Painel();
+janela.add(meuPainel);
+```
+Embora tenhamos adicionado o Panel ao nosso Frame, ainda não conseguiremos visualiza-lo quando executarmos, pois não adicionamos nenhum elemento ao Panel.
+
+Para dar um exemplo bacana, criaremos o seguinte código com base no que aprendemos até agora, para termos uma idéia do que vem pela frente:
+
+**_FramesPanels.java_**
+```java
+//Esta é a classe java que criará nosso Frame
+import javax.swing.JFrame;
+
+public class framesPanels {
+
+  public static void main(String[] args) {
+    JFrame janela = new JFrame("Meu primeiro Frame");
+    Painel meuPainel = new Painel();
+
+    janela.setDefaultCloseOperation( JFrame.EXIT_ON_CLOSE );
+    janela.add(meuPainel);
+    janela.setSize(600, 400);
+    janela.setVisible(true);
+  }
+}
+```
+**_Painel.java_**
+```java
+import java.awt.Graphics;
+import javax.swing.JPanel;
+
+public class Painel extends JPanel{
+	public void paintComponent( Graphics g ){
+	    super.paintComponent( g );
+	    int pixel=0;
+	    
+	    for(pixel=0 ; pixel <= getHeight() ; pixel += 10){
+	        g.drawLine(0, pixel, pixel, getHeight());
+	        }
+
+	    for(pixel=getHeight() ; pixel >=0 ; pixel -= 10){
+	        g.drawLine(0, pixel, getHeight() - pixel, 0);
+	    }
+	    
+	    for(pixel=0 ; pixel <= getHeight() ; pixel +=10){
+	        g.drawLine(getWidth(), pixel, getWidth() - pixel, getHeight());
+	    }
+	    
+	    for(pixel=getHeight() ; pixel >=0 ; pixel -= 10){
+	        g.drawLine(getWidth(), pixel, getWidth() - (getHeight() - pixel), 0);
+	    }
+	    
+	}
+}
+```
+Para Mais detalhes sobre os métodos e outras funcionalidades do JPanel, você pode acessar a [Documentação do JPanel](http://docs.oracle.com/javase/1.4.2/docs/api/javax/swing/JPanel.html)
 
 ---
