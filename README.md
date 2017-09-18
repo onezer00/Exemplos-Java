@@ -1,7 +1,7 @@
 # Exemplos-Java
 Mostrando alguns exemplos em Java
 <p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/java.png"> <img /> </p>
-## Aprendendo Java com exemplos práticos
+***Aprendendo Java com exemplos práticos***
 
 **Java - Como devo começar?**
 Se nunca se deparou com Java antes, sugiro que comece lendo a documentação da própria Sun, que é a desenvolvedora da plataforma Java em [What Is the Java Platform](http://www.oracle.com/technetwork/java/index.html). Se já ouviu um pouco sobre, mas ainda não está totalmente por dentro, sugiro que leia assim mesmo a documentação. Isso te dará informações valiosas sobre os objetivos básicos da técnologia Java e como dúvidas gerais. Outra forma de começar, é ler livros como [Getting Started With Java Technology](http://www.oracle.com/technetwork/java/index.html).
