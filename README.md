@@ -1,7 +1,6 @@
 # Exemplos-Java
 Mostrando alguns exemplos em Java
-
-![alt text](https://github.com/onezer00/Exemplos-Java/blob/master/java.png "Java Sun")
+<p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/java.png"> <img /> </p>
 ## Aprendendo Java com exemplos práticos
 
 **Java - Como devo começar?**
@@ -44,4 +43,5 @@ Muita gente que vem do mundo de desenvolvimento visual acaba se assustando com a
 Mas para o desenvolvimento em Java existem dezenas de ferramentas, e entre elas existem ferramentas tão e até mais sofisticadas do que as ferramentas existentes para outras linguagens. Portanto, aconselhamos que como parte do seu aprendizado, você conheça pelo menos uma dessas ferramentas, sugiro  que faça download do [NetBeans](http://www.netbeans.com/), que é uma ferramenta de desenvolvimento Java, visual, ela própria é escrita em Java (assim você inclusive tem uma idéia de que aplicações muito sofisticadas podem ser desenvolvidas inteiramente em Java), e é totalmente gratuita.
 
 **Agora que temos uma noção do que é Java, e por onde começar, que tal colocarmos a mão na massa?**
-...
+
+**JFrame e JPanel - Criando uma aplicação gráfica em Java**
