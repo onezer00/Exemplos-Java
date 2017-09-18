@@ -115,7 +115,7 @@ Vamos adicionar alguns elementos ao nosso frame, e faremos isso inserindo um JPa
 Para usar o JPanel, importamos essa classe da package swing, usando ``import.javax.swing.JPanel;``.
 
 Vamos criar uma classe que será nosso painel, vamos chamar de "Painel".
-Para isso, basta fazer com que ela **_Extends_** a _JPanel_, como aprendemos em [Herança], para herdarmos todas as propriedades do JPanel.
+Para isso, basta fazer com que ela **_Extends_** a _JPanel_, como aprendemos em [Herança](https://github.com/onezer00/Exemplos-Java/blob/master/HERAN%C3%87A.MD), para herdarmos todas as propriedades do JPanel.
 
 ```java
 import javax.swing.JPanel;
