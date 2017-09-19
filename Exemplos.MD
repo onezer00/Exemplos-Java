@@ -35,3 +35,23 @@ _Deverá ficar como no exemplo:_
 <p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/fontlist.png"> <img /> </p>
 
 Veja o código do nosso exemplo: [Exemplo Font - Git](https://github.com/onezer00/Exemplos-Java/blob/master/Font)
+
+---
+**Bordas**
+---
+Aqui veremos dois exemplos de bordas, primeiro vamos ver como estilizar nossos trabalhos com vários tipos de bordas simples, coloridas e em diversos formatos. Que poderemos utilizar em no dia a dia, em várias ocasiões:
+
+_Segue o primeiro exemplo:_
+<p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/java.png"> <img /> </p>
+
+Veja o código de nosso primeiro exemplo sobre bordas: [Exemplo Bordas]()
+
+Em nosso segundo exemplo, veremos como aplicar o efeito de bordas em um JButton, e ainda como estilizar combinando vários efeitos ao mesmo botão.
+
+_Veja no segundo exemplo:_
+_Segue o primeiro exemplo:_
+<p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/java.png"> <img /> </p>
+
+Aqui o código de nosso segundo exemplo sobre bordas: [Exemplo de bordas coloridas]()
+
+---
