@@ -51,6 +51,6 @@ Em nosso segundo exemplo, veremos como aplicar o efeito de bordas em um JButton,
 _Veja no segundo exemplo:_
 <p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/bordasButtons.png"> <img /> </p>
 
-Aqui o código de nosso segundo exemplo sobre bordas: [Exemplo de bordas coloridas](https://github.com/onezer00/Exemplos-Java/blob/master/Bordas%20Coloridas)
+Aqui o código de nosso segundo exemplo sobre bordas coloridas em um JButton: [Exemplo de bordas coloridas](https://github.com/onezer00/Exemplos-Java/blob/master/Bordas%20Coloridas)
 
 ---
