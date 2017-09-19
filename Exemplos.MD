@@ -49,8 +49,7 @@ Veja o código de nosso primeiro exemplo sobre bordas: [Exemplo Bordas]()
 Em nosso segundo exemplo, veremos como aplicar o efeito de bordas em um JButton, e ainda como estilizar combinando vários efeitos ao mesmo botão.
 
 _Veja no segundo exemplo:_
-_Segue o primeiro exemplo:_
-<p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/java.png"> <img /> </p>
+<p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/bordasButtons.png"> <img /> </p>
 
 Aqui o código de nosso segundo exemplo sobre bordas: [Exemplo de bordas coloridas]()
 
