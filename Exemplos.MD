@@ -54,3 +54,32 @@ _Veja no segundo exemplo:_
 Aqui o código de nosso segundo exemplo sobre bordas coloridas em um JButton: [Exemplo de bordas coloridas](https://github.com/onezer00/Exemplos-Java/blob/master/Bordas%20Coloridas)
 
 ---
+**Cores**
+---
+Podemos definir e manipular as cores em Java através da classe ``Color``. Esta classe encapsula as cores do sistema RGB (Red, Green and Blue).
+O sistema RGB pode ser entendido como objetos que emitem luz, como monitores, televisão ou o sol, sobrepondo ou somando os comprimentos de onda.
+A escala de cor varia de 0 até 255, sendo que 0 o canhão está desligado e com 255 ligado no máximo. Quando temos os três canhões desligados, teremos o preto, que indica ausência de luz, enquanto que quando ligamos todos os canhões no máximo, teremos o branco.
+
+**Cores de Fontes:**
+Para definirmos as cores das fontes componentes, basta definir a propriedade do ``Foreground`` com a cor desejada. É possível utilizar cores predefinidas ou definir na hora.
+
+_Veja no exemplo:_
+```java
+JLabel6.setForeground(Color.blue);
+Color vermelhoEscuro = new Color(235, 50, 50);
+JLabel5.setForeground(vermelhoEscuro);
+```
+
+**Cores de Fontes:**
+Para definirmos as cores de fundo, utilizamos a propriedade ``Background``. O detalhe é que esta propriedade só funciona para componentes que sejam opacos. Então, é necessário definir opacidade como verdadeiro.
+
+_Veja no exemplo:_
+```java
+JLabel7.setOpaque(true);
+JLabel7.setBackground(Color.green);
+```
+
+_Para ilustrar nosso trabalho, faremos o exemplo a seguir:_
+<p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/Cores.png"> <img /> </p>
+
+Segue nosso código para o exemplo: [Exemplo Color - Git](https://github.com/onezer00/Exemplos-Java/blob/master/Color)
