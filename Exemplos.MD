@@ -44,7 +44,7 @@ Aqui veremos dois exemplos de bordas, primeiro vamos ver como estilizar nossos t
 _Segue o primeiro exemplo:_
 <p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/Bordas.png"> <img /> </p>
 
-Veja o código de nosso primeiro exemplo sobre bordas: [Exemplo Bordas]()
+Veja o código de nosso primeiro exemplo sobre bordas: [Exemplo Bordas](https://github.com/onezer00/Exemplos-Java/blob/master/Bordas)
 
 Em nosso segundo exemplo, veremos como aplicar o efeito de bordas em um JButton, e ainda como estilizar combinando vários efeitos ao mesmo botão.
 
