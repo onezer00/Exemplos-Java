@@ -42,7 +42,7 @@ Veja o código do nosso exemplo: [Exemplo Font - Git](https://github.com/onezer0
 Aqui veremos dois exemplos de bordas, primeiro vamos ver como estilizar nossos trabalhos com vários tipos de bordas simples, coloridas e em diversos formatos. Que poderemos utilizar em no dia a dia, em várias ocasiões:
 
 _Segue o primeiro exemplo:_
-<p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/java.png"> <img /> </p>
+<p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/Bordas.png"> <img /> </p>
 
 Veja o código de nosso primeiro exemplo sobre bordas: [Exemplo Bordas]()
 
