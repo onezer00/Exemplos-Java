@@ -1,0 +1,43 @@
+import java.awt.Dimension;
+import java.awt.FlowLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JTextField;
+
+/**
+ *
+ * @author onezer0
+ */
+public class Eventos extends JFrame implements ActionListener{
+    private JButton btn1 = null;
+    private JButton btn2 = null;
+    private JTextField texto = null;
+    Eventos(){
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setLayout(new FlowLayout());
+        setSize(600, 200);
+        setLocation(0, 400);
+        
+        btn1 = new JButton("Clique-me");
+        btn2 = new JButton("Limpar");
+        texto = new JTextField(10);
+        
+        btn1.addActionListener(this);
+        btn2.addActionListener(this);
+        
+        add(btn1);
+        add(btn2);
+        add(texto);
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+        if(e.getActionCommand().equals("Clique-me")){
+            texto.setText("Botão foi clicado");
+        }else{
+            texto.setText(null);
+        }
+    }
+}
