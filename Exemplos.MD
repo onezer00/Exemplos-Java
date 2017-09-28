@@ -99,14 +99,14 @@ O método addXXListener recebe por parâmetro o objeto que implementa a interfac
 
 **Eventos prontos**
 
-Ação do Usuário | Evento disparado | Listener
-		---		|	---			   |		---
-Clicar em um boão - JButton | ActionEvent | ActionListener
-Abrir, minimizar ou fechar uma janela - JFrame | WindowEvent | WindowListener
-Clicar em um componente - JComponent | Mouse Event | MouseListener
-Alteração de texto em um campo de texto - JTextField | TextEvent | TextListener
-Digitar uma tecla | KeyEvent | KeyListener
-Clicar em um item de escolha - Checkbox | ItemEvent | ItemListener
+|Ação do Usuário 			              | Evento disparado | Listener       |
+|-----------------------------------------------------|------------------|----------------|
+|Clicar em um boão - JButton 		              | ActionEvent      | ActionListener |
+|Abrir, minimizar ou fechar uma janela - JFrame       | WindowEvent      | WindowListener |
+|Clicar em um componente - JComponent                 | Mouse Event      | MouseListener  |
+|Alteração de texto em um campo de texto - JTextField | TextEvent        | TextListener   |
+|Digitar uma tecla 				      | KeyEvent         | KeyListener    |
+|Clicar em um item de escolha - Checkbox              | ItemEvent        | ItemListener   |
 
 Inicialmente, falaremos apenas sobre o ``ActionListener``. Mas você pode testar os outros "Listeners" seguindo o exemplo de implementação do método ``ActionListener``.
 
