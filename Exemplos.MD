@@ -83,3 +83,38 @@ _Para ilustrar nosso trabalho, faremos o exemplo a seguir:_
 <p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/Cores.png"> <img /> </p>
 
 Segue nosso código para o exemplo: [Exemplo Color - Git](https://github.com/onezer00/Exemplos-Java/blob/master/Color)
+
+---
+**Tratamento de Eventos em Java**
+---
+Quase todos os componentes propagam eventos. Estes eventos devem ser tratados em algum ponto do código da aplicação. Os eventos nunca são tratados no próprio componente.
+Para ligar o código de tratamento de eventos ao componente existem, no Java, um conjunto de interfaces chamadas listeners. Um listener é uma interface que especifica os métodos que uma aplicação deve ter para ser notificada da concorrência de um determinado evento. Os componentes que geram eventos permitem que sejam adicionados ou removidos listeners em qualquer altura.
+
+**Funcionamento do tratamento de eventos**
+---
+* O componente que produz eventos possui métodos especiais do tipo addXXListener(XXListener) que permite adicionar ou remover listeners. Onde XX representa o nome do evento.
+O método addXXListener recebe por parâmetro o objeto que implementa a interface XXListener.
+
+* A implementação do método addXXListener no componente apenas adiciona o objeto passado por um parâmetro a uma lista interna. Sempre que ocorrer um evento (ex. botão pressionado), o componente percorre a lista e invoca, para cada elemento, o método definido na interface XXListener.
+
+**Eventos prontos**
+
+Ação do Usuário | Evento disparado | Listener
+		---		|	---			   |		---
+Clicar em um boão - JButton | ActionEvent | ActionListener
+Abrir, minimizar ou fechar uma janela - JFrame | WindowEvent | WindowListener
+Clicar em um componente - JComponent | Mouse Event | MouseListener
+Alteração de texto em um campo de texto - JTextField | TextEvent | TextListener
+Digitar uma tecla | KeyEvent | KeyListener
+Clicar em um item de escolha - Checkbox | ItemEvent | ItemListener
+
+Inicialmente, falaremos apenas sobre o ``ActionListener``. Mas você pode testar os outros "Listeners" seguindo o exemplo de implementação do método ``ActionListener``.
+
+**Vamos implementar**
+
+* Vamos implementar um programa simples para incrementar um texto a um ``JTextBox``. Quando apertamos o botão "Clique-me", irá aparecer o texto "Botão foi clicado", apertar em "Limpar", o texto será retirado.
+* Para isso, precisaremos de um JFrame, dentro dele teremos dois JButton e um JTextBox.
+
+<p align="center"><img src="https://github.com/onezer00/Exemplos-Java/blob/master/actionListener.png"> <img />
+
+Aqui está o código de nosso exemplo: [Exemplo Listener - Git](https://github.com/onezer00/Exemplos-Java/blob/master/Listener)
