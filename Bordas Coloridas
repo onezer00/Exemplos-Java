@@ -1,67 +1,58 @@
-import java.awt.Color;
-import java.awt.Dimension;
-import java.awt.GridLayout;
-import javax.swing.BorderFactory;
-import javax.swing.JButton;
-import javax.swing.JFrame;
-import javax.swing.border.Border;
-import javax.swing.border.CompoundBorder;
-import javax.swing.border.LineBorder;
+/*
+* JDK 20
+*
+* @Author:Oner
+*
+*/
 
-/**
- *
- * @author onezer0
- */
-public class BordasExp2 extends JFrame{
-    private Border bordaLinha = null;
-    private Border bordaChanfro = null;
-    private Border bordaLinhaChanfro = null;
-    private Border bordaVermelha = null;
-    private Border bordaLaranja = null;
-    private Border bordaAmarela = null;
-    private Border bordaVerde = null;
-    private Border bordaAzul = null;
-    private Border bordaMagenta = null;
-    private Border bordaDuasCores = null;
-    private Border bordaTresCores = null;
-    private Border bordaQuatroCores = null;
-    private Border bordaCincoCores = null;
-    private Border bordaSeisCores = null;
-    private JButton botaoArcoIris = null;
-    private JButton botaoLinhaChanfro = null;
-    
-    public BordasExp2(){
+import java.awt.*;
+import javax.swing.*;
+import javax.swing.border.*;
+
+public class BordasExp2 extends JFrame {
+
+    public BordasExp2() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setPreferredSize(new Dimension(300, 100));
-        setLayout(new GridLayout(1, 21));
-        
-        bordaLinha = LineBorder.createBlackLineBorder();        
-        bordaChanfro = BorderFactory.createRaisedBevelBorder();        
-        bordaLinhaChanfro = new CompoundBorder(bordaChanfro, bordaLinha);
-        
-        botaoLinhaChanfro = new JButton("Linha Chanfro");
-        
-        botaoLinhaChanfro.setBorder(bordaLinhaChanfro);
-        
-        bordaVermelha = BorderFactory.createLineBorder(Color.red);
-        bordaLaranja = BorderFactory.createLineBorder(Color.orange);
-        bordaAmarela = BorderFactory.createLineBorder(Color.yellow);
-        bordaVerde = BorderFactory.createLineBorder(Color.green);
-        bordaAzul = BorderFactory.createLineBorder(Color.blue);
-        bordaMagenta = BorderFactory.createLineBorder(Color.magenta);
-        
-        bordaDuasCores = new CompoundBorder(bordaMagenta, bordaAzul);
-        bordaTresCores = new CompoundBorder(bordaDuasCores, bordaVerde);
-        bordaQuatroCores = new CompoundBorder(bordaTresCores, bordaAmarela);
-        bordaCincoCores = new CompoundBorder(bordaQuatroCores, bordaLaranja);
-        bordaSeisCores = new CompoundBorder(bordaCincoCores, bordaVermelha);
-        
-        botaoArcoIris = new JButton("Arco-Iris");
-        botaoArcoIris.setBorder(bordaSeisCores);        
-        
+        setLayout(new GridLayout(1, 2));
+
+        JButton botaoLinhaChanfro = createButton("Linha Chanfro", LineBorder.createBlackLineBorder());
+        JButton botaoArcoIris = createButton("Arco-Iris", createRainbowBorder());
+
         setLocationRelativeTo(null);
         add(botaoArcoIris);
         add(botaoLinhaChanfro);
         pack();
+    }
+
+    private JButton createButton(String text, Border border) {
+        JButton button = new JButton(text);
+        button.setBorder(border);
+        return button;
+    }
+
+    private Border createRainbowBorder() {
+        Border[] colorBorders = {
+                BorderFactory.createLineBorder(Color.orange),
+                BorderFactory.createLineBorder(Color.yellow),
+                BorderFactory.createLineBorder(Color.green),
+                BorderFactory.createLineBorder(Color.blue),
+                BorderFactory.createLineBorder(Color.magenta)
+        };
+
+        CompoundBorder compoundBorder = new CompoundBorder(Color.red != null ? BorderFactory.createLineBorder(Color.red) : null, colorBorders[0]);
+
+        for (int i = 1; i < colorBorders.length; i++) {
+            compoundBorder = new CompoundBorder(colorBorders[i], compoundBorder);
+        }
+
+        return compoundBorder;
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(() -> {
+            BordasExp2 bordasExp2 = new BordasExp2();
+            bordasExp2.setVisible(true);
+        });
     }
 }
