@@ -16,80 +16,71 @@ import javax.swing.border.SoftBevelBorder;
  * @author onezer0
  */
 public class Bordas extends JFrame{
-    private JLabel JLabel1 = null;
-    private JLabel JLabel2 = null;
-    private JLabel JLabel3 = null;
-    private JLabel JLabel4 = null;
-    private JLabel JLabel5 = null;
-    private JLabel JLabel6 = null;
-    private JLabel JLabel7 = null;
-    private JLabel JLabel8 = null;
-    private JLabel JLabel9 = null;
-    
+
     public Bordas(){
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setTitle("Exemplo de Bordas");
         setBackground(new Color(255, 0, 0));
         setLayout(new FlowLayout());
         setPreferredSize(new Dimension(250, 300));
-        
-        JLabel1 = new JLabel();
-        JLabel2 = new JLabel();
-        JLabel3 = new JLabel();
-        JLabel4 = new JLabel();
-        JLabel5 = new JLabel();
-        JLabel6 = new JLabel();
-        JLabel7 = new JLabel();
-        JLabel8 = new JLabel();
-        JLabel9 = new JLabel();
-        
+
+        JLabel JLabel1 = new JLabel();
+        JLabel JLabel2 = new JLabel();
+        JLabel JLabel3 = new JLabel();
+        JLabel JLabel4 = new JLabel();
+        JLabel JLabel5 = new JLabel();
+        JLabel JLabel6 = new JLabel();
+        JLabel JLabel7 = new JLabel();
+        JLabel JLabel8 = new JLabel();
+        JLabel JLabel9 = new JLabel();
+
         JLabel1.setHorizontalAlignment(SwingConstants.CENTER);
         JLabel1.setText("Borda BevelBorder");
         JLabel1.setBorder(BorderFactory.createBevelBorder(BevelBorder.RAISED));
-        
-        
+
+
         JLabel2.setHorizontalAlignment(SwingConstants.CENTER);
         JLabel2.setText("Borda SoftBevelBorder");
         JLabel2.setBorder(BorderFactory.createBevelBorder(SoftBevelBorder.RAISED));
-        
-        
+
+
         JLabel3.setHorizontalAlignment(SwingConstants.CENTER);
         JLabel3.setText("Borda Composta(Line + Etched)");
         JLabel3.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createEtchedBorder(), BorderFactory.createLineBorder(new Color(0, 0, 0))));
-        
-        
+
+
         JLabel4.setHorizontalAlignment(SwingConstants.CENTER);
         JLabel4.setText("Borda Line Border c/cantos arredondados");
         JLabel4.setBorder(new LineBorder(new Color(0, 0, 0), 1, true));
-        
-        
+
+
         JLabel5.setHorizontalAlignment(SwingConstants.CENTER);
         JLabel5.setText("Borda LineBorder");
         JLabel5.setBorder(BorderFactory.createLineBorder(new Color(0, 0, 0)));
         Color vermelhoEscuro = new Color(255, 50, 50);
         JLabel5.setForeground(vermelhoEscuro);
-        
-        
+
+
         JLabel6.setHorizontalAlignment(SwingConstants.CENTER);
         JLabel6.setText("Borda EtcherBorder");
         JLabel6.setBorder(BorderFactory.createEtchedBorder());
         JLabel6.setForeground(Color.blue);
-        
+
         JLabel7.setHorizontalAlignment(SwingConstants.CENTER);
         JLabel7.setText("Borda EmptyBorder");
         JLabel7.setBorder(BorderFactory.createEmptyBorder(1, 1, 1, 1));
-        
+
         JLabel8.setHorizontalAlignment(SwingConstants.CENTER);
         JLabel8.setText("Borda MultiBorder");
         JLabel8.setBorder(new MatteBorder(null));
-        
+
         JLabel9.setHorizontalAlignment(SwingConstants.CENTER);
         JLabel9.setText("Borda TitleBorder");
         JLabel9.setBorder(BorderFactory.createTitledBorder("Titulo"));
         JLabel9.setForeground(Color.red);
         JLabel9.setOpaque(true);
         JLabel9.setBackground(Color.green);
-        
+
         add(JLabel1);
         add(JLabel2);
         add(JLabel3);
@@ -99,10 +90,13 @@ public class Bordas extends JFrame{
         add(JLabel7);
         add(JLabel8);
         add(JLabel9);
-        
+
         pack();
-        
+
         setLocationRelativeTo(null);
     }
-    
+    public static void main(String[] args){
+        Bordas bordas = new Bordas();
+        bordas.setVisible(true);
+    }
 }
