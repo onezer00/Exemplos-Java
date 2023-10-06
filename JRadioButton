@@ -1,8 +1,7 @@
 import java.awt.Container;
 import java.awt.FlowLayout;
 import java.awt.Font;
-import java.awt.event.ItemEvent;
-import java.awt.event.ItemListener;
+import java.awt.event.ActionListener;
 import javax.swing.ButtonGroup;
 import javax.swing.JFrame;
 import javax.swing.JRadioButton;
@@ -12,77 +11,67 @@ import javax.swing.JTextField;
  *
  * @author onezer0
  */
-public class Tela extends JFrame implements ItemListener{
-    private JTextField txtTexto = null;
-    private Font txtNormal = null;
-    private Font txtNegrito = null;
-    private Font txtItalico = null;
-    private Font txtItalicoNegrito = null;
-    
-    private Font fntNormal = null;
-    private Font fntNegrito = null;
-    private Font fntItalico = null;
-    private Font fntItalicoNegrito = null;
-    
-    private JRadioButton rdNormal = null;
-    private JRadioButton rdNegrito = null;
-    private JRadioButton rdItalico = null;
-    private JRadioButton rdNegritoItalico = null;
-    private ButtonGroup rdTipoFonte = null;
-    
-    public Tela(){
+
+public class Tela extends JFrame {
+    private final JTextField txtTexto = new JTextField("Exemplo Java", 31);
+
+    private final Font fntNormal = new Font("TimesRoman", Font.PLAIN, 14);
+    private final Font fntNegrito = new Font("TimesRoman", Font.BOLD, 14);
+    private final Font fntItalico = new Font("TimesRoman", Font.ITALIC, 14);
+    private final Font fntItalicoNegrito = new Font("TimesRoman", Font.BOLD + Font.ITALIC, 14);
+
+    private final JRadioButton rdNormal = new JRadioButton("Normal", true);
+    private final JRadioButton rdNegrito = new JRadioButton("Negrito", false);
+    private final JRadioButton rdItalico = new JRadioButton("Italico", false);
+    private final JRadioButton rdNegritoItalico = new JRadioButton("Negrito e Italico", false);
+
+    public Tela() {
         super("Exemplo de fonte");
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         setSize(400, 100);
         setLocation(500, 300);
+
         Container painelConteudo = getContentPane();
         painelConteudo.setLayout(new FlowLayout());
-        
-        txtTexto = new JTextField("Exemplo Java", 31);
-        rdNormal = new JRadioButton("Normal", true);
-        rdNegrito = new JRadioButton("Negrito", false);
-        rdItalico = new JRadioButton("Italico", false);
-        rdNegritoItalico = new JRadioButton("Negrito e Italico", false);
-        
-        fntNormal = new Font("TimesRoman", Font.PLAIN, 14);
-        fntNegrito = new Font("TimesRoman", Font.BOLD, 14);
-        fntItalico = new Font("TimesRoman", Font.ITALIC, 14);
-        fntItalicoNegrito = new Font("TimesRoman", Font.BOLD + Font.ITALIC, 14);
-        
-        rdTipoFonte = new ButtonGroup();
+
+        ButtonGroup rdTipoFonte = new ButtonGroup();
         rdTipoFonte.add(rdNormal);
         rdTipoFonte.add(rdNegrito);
         rdTipoFonte.add(rdItalico);
         rdTipoFonte.add(rdNegritoItalico);
-        
-        rdNormal.addItemListener(this);
-        rdNegrito.addItemListener(this);
-        rdItalico.addItemListener(this);
-        rdNegritoItalico.addItemListener(this);
-        
+
+        ActionListener fontChangeListener = e -> {
+            if (rdNormal.isSelected()) {
+                txtTexto.setFont(fntNormal);
+            } else if (rdNegrito.isSelected()) {
+                txtTexto.setFont(fntNegrito);
+            } else if (rdItalico.isSelected()) {
+                txtTexto.setFont(fntItalico);
+            } else if (rdNegritoItalico.isSelected()) {
+                txtTexto.setFont(fntItalicoNegrito);
+            }
+        };
+
+        rdNormal.addActionListener(fontChangeListener);
+        rdNegrito.addActionListener(fontChangeListener);
+        rdItalico.addActionListener(fontChangeListener);
+        rdNegritoItalico.addActionListener(fontChangeListener);
+
         painelConteudo.add(txtTexto);
         painelConteudo.add(rdNormal);
         painelConteudo.add(rdNegrito);
         painelConteudo.add(rdItalico);
         painelConteudo.add(rdNegritoItalico);
-        
-        
+
         txtTexto.setFont(fntNormal);
-        
+
         pack();
     }
 
-    @Override
-    public void itemStateChanged(ItemEvent e) {
-        if(e.getSource() == rdNormal){
-            txtTexto.setFont(fntNormal);
-        }else if(e.getSource() == rdNegrito){
-            txtTexto.setFont(fntNegrito);
-        }else if(e.getSource() == rdItalico){
-            txtTexto.setFont(fntItalico);
-        }else if(e.getSource() == rdNegritoItalico){
-            txtTexto.setFont(fntItalicoNegrito);
-        }
-        }
-    
+    public static void main(String[] args) {
+        javax.swing.SwingUtilities.invokeLater(() -> {
+            Tela tela = new Tela();
+            tela.setVisible(true);
+        });
+    }
 }
