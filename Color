@@ -8,34 +8,39 @@ import javax.swing.JPanel;
  *
  * @author onezer0
  */
-public class Cores extends JFrame{
-    private JPanel p1 = null;
-    private JPanel p2 = null;
-    
-    public Cores(){
+public class Cores extends JFrame {
+
+    public Cores() {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        setSize(300,120);
+        setSize(300, 120);
         setLayout(new FlowLayout());
         setBackground(Color.yellow);
-        
-        p1 = new JPanel();
-        p2 = new JPanel();
-        
-        p1.setLayout(new FlowLayout());
-        p2.setLayout(new FlowLayout());
-        
-        p1.setBackground(Color.red);
-        p2.setBackground(Color.blue);
-        
-        p1.add(new JButton("p1"));
-        p1.add(new JButton("p2"));
-        p1.add(new JButton("p3"));
-        
-        p2.add(new JButton("p1"));
-        p2.add(new JButton("p2"));
-        p2.add(new JButton("p3"));
-        
-        add(p1);
-        add(p2);
+
+        JPanel panel1 = createColoredPanel(Color.red);
+        JPanel panel2 = createColoredPanel(Color.blue);
+
+        addButtonsToPanel(panel1);
+        addButtonsToPanel(panel2);
+
+        add(panel1);
+        add(panel2);
+    }
+
+    private JPanel createColoredPanel(Color color) {
+        JPanel panel = new JPanel();
+        panel.setLayout(new FlowLayout());
+        panel.setBackground(color);
+        return panel;
+    }
+
+    private void addButtonsToPanel(JPanel panel) {
+        panel.add(new JButton("p1"));
+        panel.add(new JButton("p2"));
+        panel.add(new JButton("p3"));
+    }
+
+    public static void main(String[] args) {
+        Cores cores = new Cores();
+        cores.setVisible(true);
     }
 }
