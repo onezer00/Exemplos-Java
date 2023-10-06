@@ -10,26 +10,33 @@ import javax.swing.WindowConstants;
  *
  * @author onezer0
  */
-public class Fontes1 extends JFrame{
-    
-    public Fontes1(){
+
+public class Fontes1 extends JFrame {
+
+    public Fontes1() {
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setPreferredSize(new Dimension(800, 400));
         setLocation(0, 400);
-        
-        String listaDeFontes[] = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
-        
+
+        String[] listaDeFontes = GraphicsEnvironment.getLocalGraphicsEnvironment().getAvailableFontFamilyNames();
+
         int i = listaDeFontes.length;
-        
+
         getContentPane().setLayout(new FlowLayout());
         JLabel jb;
         Font f;
-        
-        for(int j = 0; j < i; j++){
-            jb = new JLabel("Aula 3 - " + listaDeFontes[j] + " -XX");
-            f = new Font(listaDeFontes[j], Font.PLAIN, 14);
+
+        for (String listaDeFonte : listaDeFontes) {
+            jb = new JLabel("Aula 3 - " + listaDeFonte + " -XX");
+            f = new Font(listaDeFonte, Font.PLAIN, 14);
             add(jb);
         }
         pack();
+    }
+    public static void main (String[] args) {
+        javax.swing.SwingUtilities.invokeLater(() -> {
+            Fontes1 fontes1 = new Fontes1();
+            fontes1.setVisible(true);
+        });
     }
 }
